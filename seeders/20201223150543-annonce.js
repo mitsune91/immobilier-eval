@@ -12,13 +12,13 @@ module.exports = {
      * }], {});
     */
   await queryInterface.bulkInsert('Annonces', [{
-      name: "première annonce",
-      description: "Villa avec piscine",
+      name: "Villa sud paris",
+      description: "Villa avec vue sur champs de vache, piscine, pas de cuisine",
       createdAt: new Date(),
       updatedAt: new Date()     
     },{
-      name: "Deuxième annonce",
-      description: "Villa avec balcon",
+      name: "Ferme sans animaux",
+      description: "Ferme toute neuve sans rien pas meme les murs",
       createdAt: new Date(),
       updatedAt: new Date()
     }

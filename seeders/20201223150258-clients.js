@@ -12,14 +12,14 @@ module.exports = {
      * }], {});
     */
     await queryInterface.bulkInsert('Clients', [{
-        firstname: "Toto",
-        lastname: "TITI",
+        firstname: "Client",
+        lastname: "1",
         dateBuy: new Date(),
         createdAt: new Date(),
         updatedAt: new Date()
       },{
-        firstname: "Jean-Marie",
-        lastname: "Begue",
+        firstname: "Client",
+        lastname: "2",
         dateBuy: new Date(),
         createdAt: new Date(),
        updatedAt: new Date()
