@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class AgentImmonilier extends Model {
+  class AgentImmobilier extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -11,17 +11,17 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      AgentImmonilier.belongsTo(models.Agent);
-      AgentImmonilier.belongsTo(models.Bien);
-      AgentImmonilier.belongsTo(models.Annonce);
-      AgentImmonilier.belongsTo(models.Client);
+      AgentImmobilier.belongsTo(models.Agent);
+      AgentImmobilier.belongsTo(models.Bien);
+      AgentImmobilier.belongsTo(models.Annonce);
+      AgentImmobilier.belongsTo(models.Client);
     }
   };
-  AgentImmonilier.init({
+  AgentImmobilier.init({
 
   }, {
     sequelize,
-    modelName: 'AgentImmonilier',
+    modelName: 'AgentImmobilier',
   });
-  return AgentImmonilier;
+  return AgentImmobilier;
 };

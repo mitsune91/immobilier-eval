@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('AgentImmoniliers', {
+    await queryInterface.createTable('AgentImmobiliers', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -16,7 +16,7 @@ module.exports = {
           model: 'Agents',
           key: 'id'
         },
-        unique: 'AgentImmonilier'
+        unique: 'AgentImmobilier'
       },
       ClientId: {
         type: Sequelize.INTEGER,
@@ -26,7 +26,7 @@ module.exports = {
           model: 'Clients',
           key: 'id'
         },
-        unique: 'AgentImmonilier'
+        unique: 'AgentImmobilier'
       },
       AnnonceId: {
         type: Sequelize.INTEGER,
@@ -36,7 +36,7 @@ module.exports = {
           model: 'Annonces',
           key: 'id'
         },
-        unique: 'AgentImmonilier'
+        unique: 'AgentImmobilier'
       },
       BienId: {
         type: Sequelize.INTEGER,
@@ -46,7 +46,7 @@ module.exports = {
           model: 'Biens',
           key: 'id'
         },
-        unique: 'AgentImmonilier'
+        unique: 'AgentImmobilier'
       },
       createdAt: {
         allowNull: false,
@@ -59,12 +59,12 @@ module.exports = {
     })
     .then(() => {
       return queryInterface.sequelize.query(
-        'ALTER TABLE `AgentImmoniliers` ADD UNIQUE `unique_index`(`AgentId`,`ClientId`,`AnnonceId`,`BienId`)'
+        'ALTER TABLE `AgentImmobiliers` ADD UNIQUE `unique_index`(`AgentId`,`ClientId`,`AnnonceId`,`BienId`)'
       );
     });
 
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('AgentImmoniliers');
+    await queryInterface.dropTable('AgentImmobiliers');
   }
 };
