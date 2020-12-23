@@ -1,0 +1,353 @@
+{
+	"info": {
+		"_postman_id": "e44c392f-73e2-49b0-b41b-8fe8686df055",
+		"name": "AgenceImmobilier",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "127.0.0.1:3000/agent/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    { \n        \"name\": \"BEGUE JM\",\n        \"email\": \"admin@dev.fr\",\n        \"pwd\": \"azerty\"\n    }\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3000/agent/register",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"agent",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3000/agent/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    { \n        \"email\": \"admin@dev.fr\",\n        \"pwd\": \"azerty\"\n    }\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3000/agent/login",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"agent",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3000/client",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGRldi5mciIsIm5hbWUiOiJCRUdVRSBKTSIsImlhdCI6MTYwODczMzc3MSwiZXhwIjoxNjA4ODIwMTcxfQ.66uhmaXbURz9US-d_dwwC6Y5nwrI8Dlrva4Gk0-BWns",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstname\": \"Jean-Maire\",\n    \"lastname\": \"BEGUE\",\n    \"dateBuy\": \"2020-12-23\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3000/client/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"client",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3000/client/add",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGRldi5mciIsIm5hbWUiOiJCRUdVRSBKTSIsImlhdCI6MTYwODczNDIxOCwiZXhwIjoxNjA4ODIwNjE4fQ.YDT7lqo184Di_070SbKk2pa0bcheIewIwYjOFqvILfo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstname\": \"Test 5\",\n    \"lastname\": \"Cinq\",\n    \"datBuy\": \"2021-12-22\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3000/client/add",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"client",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3000/client/3",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGRldi5mciIsIm5hbWUiOiJCRUdVRSBKTSIsImlhdCI6MTYwODczNDIxOCwiZXhwIjoxNjA4ODIwNjE4fQ.YDT7lqo184Di_070SbKk2pa0bcheIewIwYjOFqvILfo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstname\": \"T 5\",\n    \"lastname\": \"Cinq\",\n    \"datBuy\": \"2021-12-22\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3000/client/5",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"client",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3000/annonce/add",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGRldi5mciIsIm5hbWUiOiJCRUdVRSBKTSIsImlhdCI6MTYwODczNDIxOCwiZXhwIjoxNjA4ODIwNjE4fQ.YDT7lqo184Di_070SbKk2pa0bcheIewIwYjOFqvILfo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"annonce bien 1\",\n    \"description\": \"bien avec balcon\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3000/annonce/add",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"annonce",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3000/annonce/1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGRldi5mciIsIm5hbWUiOiJCRUdVRSBKTSIsImlhdCI6MTYwODczNDIxOCwiZXhwIjoxNjA4ODIwNjE4fQ.YDT7lqo184Di_070SbKk2pa0bcheIewIwYjOFqvILfo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"annonce bien 2\",\n    \"description\": \"bien avec piscine\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3000/annonce/1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"annonce",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3000/bien/add",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGRldi5mciIsIm5hbWUiOiJCRUdVRSBKTSIsImlhdCI6MTYwODczNDIxOCwiZXhwIjoxNjA4ODIwNjE4fQ.YDT7lqo184Di_070SbKk2pa0bcheIewIwYjOFqvILfo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Aston Ecole\",\n    \"adresse\": \"19-21 Rue de 8 mai 1945, 94110 Arcueil\",\n    \"AnnonceId\": 1,\n    \"ClientId\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:3000/bien/add",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"bien",
+						"add"
+					]
+				},
+				"description": "un bien a une description et un acheteur "
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:3000/bien",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGRldi5mciIsIm5hbWUiOiJCRUdVRSBKTSIsImlhdCI6MTYwODczNDIxOCwiZXhwIjoxNjA4ODIwNjE4fQ.YDT7lqo184Di_070SbKk2pa0bcheIewIwYjOFqvILfo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:3000/bien",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"bien"
+					]
+				},
+				"description": "Récupération des biens"
+			},
+			"response": []
+		}
+	]
+}
